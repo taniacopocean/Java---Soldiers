@@ -1,0 +1,26 @@
+public class Bowman extends Soldier{
+	//A class Bowman which extends the Soldier class
+	private double range; 		//A parameter for the range of the arrow
+	public Bowman(double a, double b, double s, double r){
+	
+	//The constructor of the class. This constructor has another parameter, apart from the ones that the Soldier class already has, which is the range of the arrow
+		super(a,b,s);
+	
+		range=r;
+	}
+		
+	public boolean checkRange(Soldier s){ 	//A method to check if the other soldier (s) is in the range of bowman's arrow
+		return (getDistance(s)<=range);
+	
+	}
+	
+	public String toString(){
+	//A toString method, to return the type of the Soldier (in this case Bowman)
+		return "Bowman";
+	
+	}
+
+	public double getRange(){   //A method to get the range of the arrow
+		return range;
+	}
+}
